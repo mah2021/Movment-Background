@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Video Background</title>
+</head>
+<body>
+    <div class="hero">
+     <video autoplay loop muted  plays-inline  id="backvideo">
+         <source src="Images/production ID 4010941.mp4" type="video/mp4">
+     </video>
+
+<div class="logo">
+
+    <img src="Images/logo.png" alt="">
+</div>
+
+
+
+     <div class="sidebar">
+      <div class="text-box">
+       <h1>BEST WISHES</h1>
+       <h3>You are best</h3>
+       <br>
+     <div class="line"></div> </div>
+     </div>
+
+
+    <div class="content">
+
+         <h1>Leave your dreams to us</h1>
+         <p>We are with you until the end</p>
+
+         <div class="btn"  id="playBtn">
+<img src="Images/play.png" alt=""  id="icon">Watch Video
+
+
+         </div>
+    </div>
+
+     
+
+
+
+
+
+    </div>
+
+
+    <script>
+       var backvideo=document.getElementById('backvideo');
+       var playBtn=document.getElementById('playBtn');
+       var icon=document.getElementById('icon');
+       
+       playBtn.onclick=function(){
+           backvideo.style.display="block";
+           if(backvideo.paused){
+               backvideo.play();
+               icon.src="Images/pause.png";
+           }
+           else{
+               backvideo.pause();
+               icon.src="Images/play.png";
+           }
+       }
+    </script>
+</body>
+</html>
